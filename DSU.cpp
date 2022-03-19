@@ -7,7 +7,7 @@ int n,m,parent[mx],nodeRank[mx];
 
 int findParent(int x){
     if(parent[x]==x)return x;
-    return parent[x]=findParent(parent[x]);
+    return parent[x]=findParent(parent[x]); //Path Compression
 }
 void nodeUnion(int x,int y){
     int px=findParent(x);
